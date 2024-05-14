@@ -22,14 +22,26 @@ pip install pv_surrogate_data
 Then you can use the data access layer to load the data:
 
 ```python
-from pv_surrogate_data import download_data, PVGISGermanyDataset
+from pv_surrogate_data import download_data, PVGISGermanyDataset, PVGISDataPackage
 
 def main():
-  download_data()
-  data = PVGISGermanyDataset()
+  # downloads all the data from archive.org, may take a while ~60GB
+  data_path = Path(__file__) / '.pv_surrogate_data'
+  data_path.mkdir(exist_ok=True, parents=True)
+  download_data(data_path)
 
-  for sample in data:
+  # lazily loads the data, for more information see constructor
+  # Alternatively supports `FixedLocationPVGISGermanyDataset`, `OutwardPointsPVGISGermanyDataset` and `ChallengePVGISGermanyDataset`
+  data = PVGISGermanyDataset(PVGISDataPackage(data_path))
+
+  # access all static data via `data.get_all_static_data()`
+  all_static = data.get_all_static_data()
+
+  # iterate over dataframe. Support collections.abc.Sequence 
+  # additionally supports retreiving parameters (`get_static_data` and `get_all_static_data`)
+  for index, sample in enumerate(data):
     print(sample)
+    print(data.get_static_data(index))
 
 
 if __name__ == '__main__':
