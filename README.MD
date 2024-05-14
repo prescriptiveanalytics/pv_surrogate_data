@@ -10,6 +10,7 @@ For a detailed explanation of how the data was obtained / preprocessed please re
 - Additional data for fixed-parameters (location increases)
 - Easy data access using dataloaders (PACKAGE_LINK)
 - Challenge data set including downward trend
+- Downloadable from [archive.org](https://archive.org/details/pv-surrogate-data_dfalkner) (ID: `pv-surrogate-data_dfalkner`)
 
 ## Usage
 
@@ -58,7 +59,7 @@ if __name__ == '__main__':
   # the following directories relate strictly to the data
   - pvgis/  # metadata: german_enriched_{test,train}.parquet
   - pvgis_fixed_location/  # metadata: german_fixed_location.parquet
-  - pvgis_outward/ # metadata: german_outward.parquet
+  - pvgis_outward/  # metadata: german_outward.parquet
   - system_data/
     # necessary for data access
     - german_outward.parquet
@@ -67,13 +68,13 @@ if __name__ == '__main__':
     - german_fixed_location.parquet
 
     # intermediate results
-    - german_starting_points.parquet # equally spaced starting points for germany
-    - german_total_system_parameter_distribution.parquet. # full parameter distribution from germany
+    - german_starting_points.parquet  # equally spaced starting points for germany
+    - german_total_system_parameter_distribution.parquet  # full parameter distribution from germany
     - mastr_filtered.parquet  # prefiltered results from the Meldestammregister
     - pvoutput_austrian_systems.parquet  # austrian systems from pvoutput
-    - pvoutput_austrian_systems_meta.parquet # meta data for austrian systems
-    - pvoutput_german_systems.parquet. # german systems from pvoutput
-    - pvoutput_german_systems_meta.parquet. # german system meta data from pvoutput
+    - pvoutput_austrian_systems_meta.parquet  # meta data for austrian systems
+    - pvoutput_german_systems.parquet  # german systems from pvoutput
+    - pvoutput_german_systems_meta.parquet  # german system meta data from pvoutput
 ```
 
 - The request in the folders `{pvgis, pvgis_fixed_location, pvgis_outward}` can contain errors (which means some of the requests failed). The data access layers filters those out.
