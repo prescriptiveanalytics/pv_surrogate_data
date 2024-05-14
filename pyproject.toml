@@ -28,6 +28,8 @@ python = "^3.10"
 pandas = "^2.2.2"
 pyarrow = "^16.0.0"
 pandera = "^0.19.3"
+shapely = "^2.0.4"
+internetarchive = "^4.1.0"
 [tool.poetry.group.dev.dependencies]  
 poethepoet = "^0.20.0"
 black = { version = "^23.3.0", extras = ["jupyter"] }
