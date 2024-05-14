@@ -1,0 +1,20 @@
+{
+  "template": "https://github.com/prescriptiveanalytics/python-package-template",
+  "commit": "df3ae0ec4b7112093c28942c7e122067acc21424",
+  "checkout": null,
+  "context": {
+    "cookiecutter": {
+      "package_name": "pv_surrogate_data",
+      "package_description": "This repository allows for easy data access for fair-weather photovoltaic module output.",
+      "package_url": "https://github.com/prescriptiveanalytics/pv_surrogate_data",
+      "author_name": "Dominik Falkner",
+      "author_email": "dominik.falkner@risc-software.at",
+      "python_version": "3.10",
+      "docstring_style": "Google",
+      "__package_name_kebab_case": "pv-surrogate-data",
+      "__package_name_snake_case": "pv_surrogate_data",
+      "_template": "https://github.com/prescriptiveanalytics/python-package-template"
+    }
+  },
+  "directory": null
+}
