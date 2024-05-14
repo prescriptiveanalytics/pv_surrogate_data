@@ -11,7 +11,7 @@ description = "This repository allows for easy data access for fair-weather phot
 authors = [
   "Dominik Falkner <dominik.falkner@risc-software.at>"
 ]
-readme = "README.MD"
+readme = "README.md"
 repository = "https://github.com/prescriptiveanalytics/pv_surrogate_data"
 packages = [
   { include = "pv_surrogate_data" }

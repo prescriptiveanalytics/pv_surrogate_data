@@ -23,7 +23,7 @@ pip install pv-surrogate-data
 Then you can use the data access layer to load the data:
 
 ```python
-from pv_surrogate_data import download_data, PVGISGermanyDataset, PVGISDataPackage
+from pv_surrogate_data.dataset import download_data, PVGISGermanyDataset, PVGISDataPackage
 
 def main():
   # downloads all the data from archive.org, may take a while ~60GB
