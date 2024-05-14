@@ -25,6 +25,9 @@ classifiers = [
 python = "^3.10"
 
 # https://python-poetry.org/docs/master/managing-dependencies/
+pandas = "^2.2.2"
+pyarrow = "^16.0.0"
+pandera = "^0.19.3"
 [tool.poetry.group.dev.dependencies]  
 poethepoet = "^0.20.0"
 black = { version = "^23.3.0", extras = ["jupyter"] }
