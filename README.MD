@@ -17,7 +17,7 @@ For a detailed explanation of how the data was obtained / preprocessed please re
 Install using your favorite package manager:
 
 ```bash
-pip install pv_surrogate_data
+pip install pv-surrogate-data
 ```
 
 Then you can use the data access layer to load the data:
@@ -96,4 +96,3 @@ If you use my work please cite me (for details please refer to the paper)!
 ```
 Falkner, D., Bögl, M., Langthallner, I., Zenisek, J., Affenzeller, M., 2023, Surrogates for Fair-Weather Photovoltaic Module Output. Lecture Notes in Computer Science
 ```
-
