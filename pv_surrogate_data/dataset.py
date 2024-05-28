@@ -93,6 +93,15 @@ class PVGISGermanyDataset(PVGISDataset):
         module_column_name: str = NormalizedPVGISSchema.power,
         included_data: IncludedData = IncludedData.all,
     ):
+        """
+        Parameters:
+            data_package_structure (DataPackage, optional): The structure of the data package.
+                Defaults to an empty DataPackage.
+            module_column_name (str, optional): The name of the column to use as the target. Can be any column from the PVGIS data
+                Defaults to NormalizedPVGISSchema.power.
+            included_data (IncludedData, optional): The subset of the data to load.
+                Defaults to IncludedData.all.
+        """
         self.data_package = data_package_structure
         self.data_path = data_package_structure.pvgis_data_path
         self.target_column = module_column_name
@@ -144,7 +153,9 @@ class FixedLocationPVGISGermanyDataset(PVGISDataset):
     """
 
     def __init__(
-        self, data_package_structure: DataPackage = DataPackage(), module_column_name: str = NormalizedPVGISSchema.power
+        self,
+        data_package_structure: DataPackage = DataPackage(),
+        module_column_name: str = NormalizedPVGISSchema.power,
     ):
         self.data_package = data_package_structure
         self.data_path = data_package_structure.fixed_location_pvgis_data_path
@@ -189,7 +200,9 @@ class OutwardPointsPVGISGermanyDataset(PVGISDataset):
     """
 
     def __init__(
-        self, data_package_structure: DataPackage = DataPackage(), module_column_name: str = NormalizedPVGISSchema.power
+        self,
+        data_package_structure: DataPackage = DataPackage(),
+        module_column_name: str = NormalizedPVGISSchema.power,
     ):
         self.data_package = data_package_structure
         self.data_path = data_package_structure.outward_pvgis_data_path

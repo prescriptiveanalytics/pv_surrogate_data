@@ -6,7 +6,7 @@ build-backend = "poetry.core.masonry.api"
 # https://python-poetry.org/docs/pyproject/
 [tool.poetry]
 name = "pv-surrogate-data"
-version = "1.0.0"
+version = "1.0.1"
 description = "This repository allows for easy data access for fair-weather photovoltaic module output."
 authors = [
   "Dominik Falkner <dominik.falkner@risc-software.at>"
@@ -79,7 +79,7 @@ norecursedirs = [ ]
 [tool.ruff]  
 fix = true
 ignore-init-module-imports = true
-line-length = 120
+line-length = 160
 src = ["pv_surrogate_data", "tests"]
 
 [tool.ruff.pycodestyle]
